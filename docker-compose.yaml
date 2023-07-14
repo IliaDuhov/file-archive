@@ -24,8 +24,8 @@ services:
       SWAGGER_UI_PATH: "/documentation"
       MINIO_URL: http://minio:9000
       MINIO_BUCKET: "file-storage"
-      MINIO_ACCESS_KEY: "Ilia_Duhov"
-      MINIO_SECRET_KEY: "31012003ID@"
+      MINIO_ACCESS_KEY: "login"
+      MINIO_SECRET_KEY: "password"
       MAX_FILE_SIZE: "20MB"
       MAX_REQUEST_SIZE: "20MB"
       FILE-SIZE-THRESHOLD: "2KB"

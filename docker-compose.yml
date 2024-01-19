@@ -2,11 +2,12 @@ version: '3.8'
 
 services:
   minio:
-    image: bitnami/minio:2021.3.1
-    container_name: minio
+    image: minio/minio
+    command: server /data
     environment:
       MINIO_ACCESS_KEY: "Ilia_Duhov"
       MINIO_SECRET_KEY: "31012003ID@"
+      MINIO_URL: http://minio:9000
     volumes:
       - ./data/minio-persistence:/data
       - ./data/minio-persistence/certs:/certs
@@ -15,7 +16,7 @@ services:
     networks:
       - backend
 
-  filestorage:
+  app:
     build:
       context: .
       dockerfile: Dockerfile
